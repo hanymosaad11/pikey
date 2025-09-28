@@ -1,0 +1,321 @@
+/* =========================
+   Top Banner
+========================= */
+.banner .top-banner {
+  width: 100%;
+  background-color: var(--btnColor);
+  color: var(--subtitle);
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .top-banner .scroll-text {
+  display: flex;
+  gap: 2.3rem;
+  padding: 3px 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  word-spacing: 2rem;
+  letter-spacing: 2rem;
+  text-transform: uppercase;
+  animation: scrollLoop 10s linear infinite;
+}
+
+.banner .top-banner .scroll-text span {
+  flex-shrink: 0;
+  margin: 0 2rem;
+}
+
+/* Infinite Scroll Animation */
+@keyframes scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* =========================
+   Navbar
+========================= */
+.banner .navbar {
+  background: var(--dark);
+  color: var(--subtitle);
+}
+
+.banner .navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+/* Logo */
+.banner .logo {
+  width: 60px;
+}
+.banner .logo img {
+  width: 100%;
+}
+
+/* Navigation Links */
+.banner .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+.banner .nav-links a {
+  color: var(--subtitle);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  border-bottom: 1px solid transparent;
+}
+.banner .nav-links a:hover {
+  border-bottom: 1px solid var(--borderColor);
+}
+
+/* Right Navbar Icons */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  color: var(--subtitle);
+}
+.navbar-left .lang-switch,
+.navbar-left .nav-icon {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navbar-left .lang-switch span:hover,
+.navbar-left .nav-icon:hover {
+  color: var(--borderColor);
+}
+
+/* =========================
+   Hero Section
+========================= */
+.banner .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background: linear-gradient(#f6f7f8, #eceff0);
+}
+
+/* Hero Text */
+.banner .hero-left {
+  width: 400px;
+  text-align: center;
+}
+.banner .sub {
+  font-family: "Qwigley", cursive;
+  font-size: 4.6rem;
+  font-style: italic;
+  color: var(--accent);
+  line-height: 10px;
+}
+.banner .title {
+  font-size: 3.2rem;
+  font-weight: bold;
+}
+.banner .discount {
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 10px;
+}
+.banner .btn {
+  background: var(--borderColor);
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Image */
+.banner .hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px; /* keep image size close to text */
+  height: 500px; /* show only half height */
+  overflow: hidden; /* hide the rest */
+}
+.banner .hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* show top half */
+}
+
+/* =========================
+   Swiper Pagination
+========================= */
+.swiper-pagination-bullet-active {
+  background: var(--borderColor) !important; /* active bullet color */
+}
+.swiper-pagination {
+  bottom: 60px !important;
+  top: auto !important;
+  text-align: center;
+}
+
+/* =========================
+   Features Section
+========================= */
+.features-strip {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: -50px auto 40px; /* overlap with previous section */
+  padding: 1.8rem 1.8rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+}
+.features-strip .feature {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.features-strip .feature-icon {
+  font-size: 2.2rem;
+  color: var(--iconColor);
+}
+.features-strip .feature-text {
+  margin-left: 10px;
+  text-align: left;
+}
+.features-strip .feature-text span {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+.features-strip .feature-text p {
+  font-weight: 500;
+}
+
+/* =========================
+   Modal (Mobile Menu)
+========================= */
+header .fixed {
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  background-color: rgba(40, 40, 48, 0.91);
+  backdrop-filter: blur(4px);
+}
+
+/* Modal Open Animation */
+@keyframes mymove {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+header .fixed ul.modal {
+  animation: mymove 0.77s 1;
+  width: 75%;
+  margin-inline: auto;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  background-color: black;
+}
+header .fixed ul.modal li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.56);
+  padding: 0.5rem 0 0.77rem;
+}
+header .fixed ul.modal li:first-child {
+  text-align: right;
+  border: none;
+  padding: 0.2rem 0;
+  margin-bottom: -1rem;
+}
+header .fixed ul.modal li:last-child {
+  border: none;
+}
+header .fixed ul.modal li a {
+  font-size: 1rem;
+  color: white;
+}
+
+/* Close Icon */
+.icon-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon-close:hover {
+  color: var(--borderColor);
+}
+
+/* Menu Button */
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--subtitle);
+  cursor: pointer;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 900px) {
+  .banner .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 20px;
+  }
+  .banner .hero-left,
+  .banner .hero-right {
+    max-width: 100%;
+  }
+  .banner .title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner .title {
+    font-size: 28px;
+  }
+  .banner .sub {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .nav-links {
+    display: none; /* hide nav links on mobile */
+  }
+  .banner .menu-btn {
+    display: block; /* show menu button */
+  }
+}

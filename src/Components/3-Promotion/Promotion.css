@@ -1,0 +1,146 @@
+/* =========================
+   Promotion Section
+========================= */
+.promotion-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #a31717; /* Red background */
+  color: #fff;
+  width: 100%;
+  min-height: 400px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   Left Image
+========================= */
+.promotion-section .promotion-left {
+  width: 700px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.promotion-section .promotion-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+/* =========================
+   Right Content
+========================= */
+.promotion-section .promotion-right {
+  flex-grow: 1;
+  padding: 30px 0 30px 70px;
+  text-align: left;
+}
+
+.promotion-section .promotion-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.promotion-section .promotion-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.promotion-section .promotion-title span {
+  color: #fff;
+}
+
+.promotion-section .promotion-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: #f1f1f1;
+}
+
+.promotion-section .promotion-expire {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 5px 0 15px 0;
+}
+
+/* =========================
+   Countdown
+========================= */
+.promotion-section .promotion-countdown {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.promotion-section .time-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promotion-section .promotion-timebox {
+  background: #fff;
+  color: #000;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 2px;
+}
+.promotion-section .promotion-timebox span {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.promotion-section .time-column small {
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* =========================
+   Button
+========================= */
+.promotion-section .promotion-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--iconColor);
+  border: none;
+  padding: 12px 45px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s;
+  margin-left: 6rem;
+}
+.promotion-section .promotion-btn:hover {
+  background: #e68c0b;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 992px) {
+   .promotion-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .promotion-section .promotion-left {
+    width: 100%;
+    max-width: 500px;
+  }
+  .promotion-section .promotion-right {
+    padding: 20px;
+  }
+   .promotion-section .promotion-countdown {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
