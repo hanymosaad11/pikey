@@ -115,6 +115,7 @@ const PromoSection = () => {
       <div className="container products">
         {products.map((item) => (
           <div key={item.id} className="product-card">
+            
             {/* Discount Badge & Share */}
             <span className="badge">{item.discount}</span>
             <span className="share">
@@ -181,9 +182,12 @@ const PromoSection = () => {
                 <FavoriteBorderOutlinedIcon />
               </span>
             </div>
+
           </div>
         ))}
       </div>
+
+
     </section>
   );
 };

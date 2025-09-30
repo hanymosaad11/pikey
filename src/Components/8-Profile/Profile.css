@@ -1,0 +1,116 @@
+.profile-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.profile-container .breadcrumb {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 50px;
+  margin-left: -10rem;
+  text-transform: uppercase;
+}
+
+.profile-container .breadcrumb a {
+  text-decoration: none;
+  font-weight: 400;
+
+  color: #888;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.profile-container .breadcrumb span.active {
+  font-weight: 400;
+  color: #000;
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.profile-container .profile-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.profile-container .section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 15px 0 15px;
+  color: #333;
+}
+
+.profile-container .profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-container .form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-container .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container .form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.profile-container .form-group input,
+textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  transition: border-color 0.3s;
+}
+
+.profile-container .form-group input:focus,
+textarea:focus {
+  border-color: #000000;
+  background-color: #fff;
+  outline: none;
+}
+
+.profile-container .save-btn {
+    margin: 0 auto;
+  background: #ffa500;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 15px;
+  transition: background 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-container .save-btn:hover {
+  background: #e69500;
+}
+
+@media (max-width: 1100px) {
+  .profile-container .breadcrumb {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 50px;
+    margin-left: 0;
+    text-transform: uppercase;
+  }
+}

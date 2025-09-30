@@ -36,7 +36,7 @@ export default function FooterSection() {
         <div className="footer-container">
           {/* Logo */}
           <div className="footer-logo ">
-            <img src="../../../public/img/logo.svg" alt="Loova Logo" />
+            <img src="/img/logo.svg" alt="Loova Logo" />
             <div className="footer-social">
               <a href="#">
                 <FaFacebookF />

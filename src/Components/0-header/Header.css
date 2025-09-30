@@ -1,0 +1,113 @@
+/* =========================
+   Top Banner
+========================= */
+.header-top-banner {
+  width: 100%;
+  background-color: var(--btnColor);
+  color: var(--subtitle);
+  overflow: hidden;
+  position: relative;
+}
+
+.header-scroll-text {
+  display: flex;
+  gap: 2.3rem;
+  padding: 3px 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  word-spacing: 2rem;
+  letter-spacing: 2rem;
+  text-transform: uppercase;
+  animation: header-scrollLoop 10s linear infinite;
+}
+
+.header-scroll-text span {
+  flex-shrink: 0;
+  margin: 0 2rem;
+}
+
+/* Infinite Scroll Animation */
+@keyframes header-scrollLoop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* =========================
+   Navbar
+========================= */
+.header-navbar {
+  background: var(--dark);
+  color: var(--subtitle);
+}
+
+.header-navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+/* Logo */
+.header-logo {
+  width: 60px;
+}
+.header-logo img {
+  width: 100%;
+}
+
+/* Navigation Links */
+.header-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+.header-nav-links a {
+  color: var(--subtitle);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  border-bottom: 1px solid transparent;
+}
+.header-nav-links a:hover {
+  border-bottom: 1px solid var(--borderColor);
+}
+
+/* Right Navbar Icons */
+.header-navbar-left {
+  display: flex;
+  align-items: center;
+  color: var(--subtitle);
+}
+.header-navbar-left .header-nav-icon {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.header-navbar-left .header-nav-icon:hover {
+  color: var(--borderColor);
+}
+.header-menu-btn {
+  display: none;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 992px) {
+  .header-nav-links {
+    display: none; /* إخفاء اللينكات على الموبايل */
+  }
+  .header-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+  }
+}
