@@ -9,6 +9,7 @@ import FooterSection from "./Components/5-FooterSection/FooterSection";
 import Products from "./Components/6-Products/Products";
 import Categories from "./Components/7-Categories/Categories";
 import Profile from "./Components/8-Profile/Profile";
+import About from "./Components/9-About/About";
 
 export default function App() {
   return (
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/profile" element={<Profile/>} />
+          <Route path="/about" element={<About/>} />
         </Routes>
       </Router>
     </>
