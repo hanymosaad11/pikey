@@ -1,5 +1,4 @@
 .about-page {
-  font-family: "Arial", sans-serif;
   color: #333;
   line-height: 1.6;
 }
@@ -317,7 +316,7 @@
 .about-page .about-mvv {
   display: flex;
   justify-content: space-between;
-   align-items: flex-start;
+  align-items: flex-start;
   margin: 60px auto;
   gap: 20px;
 }
@@ -333,8 +332,8 @@
   flex: 1.5;
   margin-top: 10px;
 }
-.about-page .mvv-card.active p{
- text-align: left;
+.about-page .mvv-card.active p {
+  text-align: left;
 }
 .about-page .mvv-card .icon {
   width: 90px;

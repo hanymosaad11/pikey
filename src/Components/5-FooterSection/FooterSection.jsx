@@ -1,5 +1,7 @@
 import React from "react";
 import "./FooterSection.css";
+import { Link } from "react-router-dom";
+
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -62,22 +64,28 @@ export default function FooterSection() {
             {/* Links */}
             <ul className="footer-links">
               <li>
-                <a href="#">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="#">Products</a>
+                <Link to="/categories">Categories</Link>
               </li>
               <li>
-                <a href="#">Categories</a>
+                <Link to="/products">Products</Link>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <Link to="/about">About Us</Link>
               </li>
               <li>
-                <a href="#">About Us</a>
+                <Link to="#">Contact Us</Link>
               </li>
               <li>
-                <a href="#">Contact Us</a>
+                <Link to="#">Blog</Link>
+              </li>
+              <li>
+                <Link to="/faq">Faq</Link>
+              </li>
+              <li>
+                <Link to="/privacypolicy">PrivacyPolicy</Link>
               </li>
             </ul>
 

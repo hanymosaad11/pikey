@@ -96,7 +96,7 @@ export default function Header() {
               <Link to="#">Contact Us</Link>
             </li>
             <li>
-              <Link to="#">Blog</Link>
+              <Link to="/Blog">Blog</Link>
             </li>
           </ul>
 

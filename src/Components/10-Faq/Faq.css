@@ -1,0 +1,190 @@
+/* ==========================
+   FAQ Section Base
+========================== */
+.faq-section {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+/* ==========================
+   Hero Section
+========================== */
+.faq-section .faq-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url("/img/oldman.png") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faq-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(159, 26, 21, 0.525);
+}
+.faq-section .faq-header {
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+.faq-section .faq-header h1 {
+  font-size: 3rem;
+  letter-spacing: 1.5rem;
+}
+
+/* Breadcrumb */
+.faq-section .hero-breadcrumb {
+  position: absolute;
+  top: 1.6rem;
+  left: 7rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+}
+.faq-section .hero-breadcrumb .bc-home {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  opacity: 0.9;
+}
+.faq-section .hero-breadcrumb .bc-home:hover {
+  text-decoration: underline;
+}
+.faq-section .hero-breadcrumb .bc-sep {
+  opacity: 0.65;
+}
+.faq-section .hero-breadcrumb .bc-current {
+  font-weight: 700;
+  color: black;
+}
+
+/* ==========================
+   Section Heading
+========================== */
+.faq-section .faq-heading {
+  margin: 0 auto;
+  text-align: left;
+  width: 45%;
+  padding-left: 20px;
+}
+.faq-section .faq-heading h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 40px auto;
+  color: var(--borderColor);
+  letter-spacing: 5px;
+}
+
+/* ==========================
+   FAQ Items
+========================== */
+.faq-section .faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+.faq-section .faq-item {
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 15px 35px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+.faq-section .faq-item.active {
+  border: 1px solid var(--iconColor);
+  padding: 20px 40px;
+}
+.faq-section .faq-question {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: var(--borderColor);
+}
+.faq-section .faq-icon {
+  margin-right: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+.faq-section .faq-icon.plus {
+  color: var(--iconColor); /* orange */
+}
+.faq-section .faq-icon.minus {
+  color: var(--borderColor); /* red */
+}
+.faq-section .faq-answer {
+  margin-top: 12px;
+  color: #6f6c90;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ==========================
+   Load More Button
+========================== */
+.faq-section .load-more {
+  margin: 25px 0 50px;
+}
+.faq-section .load-more button {
+  background: orange;
+  border: none;
+  padding: 8px 40px;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.faq-section .load-more button:hover {
+  background: #e68900;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 992px) {
+  .faq-section .faq-heading {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .faq-section .faq-heading {
+    width: 90%;
+    text-align: center;
+    padding-left: 0;
+  }
+  .faq-section .faq-header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.8rem;
+  }
+  .faq-section .hero-breadcrumb {
+    left: 2rem;
+    font-size: 11px;
+  }
+}
+@media (max-width: 480px) {
+  .faq-section .faq-header h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.5rem;
+  }
+  .faq-section .faq-heading h3 {
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+  .faq-section .faq-item {
+    padding: 12px 20px;
+  }
+}
