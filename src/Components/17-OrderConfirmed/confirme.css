@@ -1,0 +1,87 @@
+/* =========================
+   Breadcrumb
+========================= */
+.order-confirmed-page .breadcrumb {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: left;
+}
+.order-confirmed-page .breadcrumb .bc-home {
+  color: var(--muted);
+  margin: 0 5px;
+}
+.order-confirmed-page .breadcrumb .bc-current {
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+/* =========================
+   Layout
+========================= */
+.order-confirmed-page {
+  text-align: center;
+  padding: 2rem 5rem;
+}
+
+.order-confirmed-wrap {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.order-confirmed-page .confirmed-img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.order-confirmed-page .confirmed-title {
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+  text-transform: uppercase;
+}
+
+/* =========================
+   Button
+========================= */
+.order-confirmed-page .back-home-btn {
+  display: inline-block;
+  background-color: #ff9c00;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.6rem 1.8rem;
+  letter-spacing: 3px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.order-confirmed-page .back-home-btn:hover {
+  background-color: #ff9500;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 768px) {
+  .order-confirmed-page .breadcrumb {
+    margin: 2rem 0 3rem 2rem;
+    font-size: 13px;
+  }
+
+  .order-confirmed-page .confirmed-img {
+    width: 140px;
+  }
+
+  .order-confirmed-page .confirmed-title {
+    font-size: 16px;
+  }
+}

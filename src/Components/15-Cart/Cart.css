@@ -1,0 +1,423 @@
+/* ===================== CART CONTAINER ===================== */
+.cart-container {
+  padding: 3rem 0;
+}
+
+/* ---------- Breadcrumb ---------- */
+.cart-container .cart-breadcrumb {
+  margin-bottom: 50px;
+  font-size: 15px;
+  color: #555;
+  letter-spacing: 3px;
+}
+
+.cart-container .cart-breadcrumb span {
+  font-weight: bold;
+}
+
+.cart-container .cart-breadcrumb .bc-home {
+  color: var(--muted);
+}
+
+/* ===================== CART CONTENT ===================== */
+.cart-container .cart-content {
+  display: flex;
+  gap: 90px;
+}
+
+/* ---------- Left Side: Cart Items ---------- */
+.cart-container .cart-items {
+  flex: 2;
+  font-weight: 600;
+}
+
+/* ---------- Cart Header & Row Layout ---------- */
+.cart-container .cart-header,
+.cart-container .cart-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* ---------- Columns ---------- */
+.cart-container .cart-col {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+/* ---------- Product Column ---------- */
+.cart-container .product-col {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+}
+
+/* ---------- Product Image ---------- */
+.cart-container .cart-img {
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* ---------- Product Details ---------- */
+.cart-container .cart-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cart-container .cart-title {
+  font-weight: 400;
+}
+
+.cart-container .cart-sub {
+  font-size: 12px;
+  color: #545454;
+  padding: 5px 0;
+}
+
+/* ---------- Remove Button ---------- */
+.cart-container .cart-remove {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+/* ===================== QUANTITY CONTROL ===================== */
+.cart-container .cart-qty {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f2f2f2;
+}
+
+.cart-container .cart-qty button,
+.cart-container .cart-qty span {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-container .cart-qty span {
+  cursor: default;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Minus Button */
+.cart-container .cart-qty button:first-child {
+  color: #333;
+}
+
+/* Plus Button */
+.cart-container .cart-qty button:last-child {
+  color: red;
+}
+
+/* ===================== CART NOTE ===================== */
+.cart-container .cart-note {
+  margin-top: 20px;
+}
+
+.cart-container .cart-note textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  resize: none;
+  background-color: transparent;
+}
+
+/* ===================== SUMMARY BOX ===================== */
+.cart-container .cart-summary {
+  flex: 1;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* ---------- Free Shipping Message ---------- */
+.cart-container .free-shipping-msg {
+  font-size: 13px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* ---------- Progress Bar ---------- */
+.cart-container .progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #f4f4f4;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: visible;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Progress Fill ---------- */
+.cart-container .progress {
+  height: 100%;
+  background: orange;
+  border-radius: 5px;
+  transition: none;
+}
+
+/* ---------- Truck Icon ---------- */
+.cart-container .truck {
+  position: absolute;
+  top: -10px;
+  transform: translateX(-20%);
+  cursor: grab;
+  user-select: none;
+  z-index: 10;
+  transition: none;
+}
+
+.cart-container .truck img {
+  width: 30px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.033));
+}
+
+.cart-container .truck:active {
+  cursor: grabbing;
+}
+
+/* ===================== COUPON BOX ===================== */
+.cart-container .coupon-box {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.cart-container .coupon-box input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.cart-container .apply-btn {
+  padding: 8px 40px;
+  background: orange;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
+
+/* ===================== TOTAL BOX ===================== */
+.cart-container .cart-total-box {
+  margin-bottom: 20px;
+}
+
+.cart-container .cart-total-box h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.cart-container .cart-total-box p:not(:last-child) {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--muted);
+  padding: 12px 0;
+}
+
+/* ---------- Grand Total ---------- */
+.cart-container .grand-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+/* ---------- Checkout Button ---------- */
+.cart-container .checkout-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5rem;
+  background: var(--iconColor);
+  letter-spacing: 3px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ---------- Free Shipping Text ---------- */
+.cart-container.free-shipping-amount {
+  color: var(--borderColor);
+  font-weight: bold;
+}
+
+/* ---------- Outer Border ---------- */
+.cart-container .cart-border {
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 2rem 2rem 6rem;
+}
+/* ===================== OTP POPUP ===================== */
+.otp-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.otp-box {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.otp-title {
+  color: var(--borderColor);
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.otp-sub {
+  color: #909090;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.otp-inputs input {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  transition: 0.2s;
+}
+
+.otp-inputs input:focus {
+  border-color: var(--iconColor);
+}
+
+.otp-confirm {
+  background: var(--iconColor);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 7px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+}
+
+.otp-resend {
+  margin-top: 10px;
+  color: #888;
+  font-size: 21px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 992px) {
+  .cart-container .cart-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-container .cart-header,
+  .cart-container .cart-row {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .cart-container .cart-img {
+    width: 60px;
+    height: 90px;
+  }
+
+  .cart-container .cart-summary {
+    padding: 15px;
+  }
+
+  .cart-container .truck img {
+    width: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-container {
+    padding: 2rem 0;
+  }
+
+  .cart-container .cart-header,
+  .cart-container .cart-row {
+    grid-template-columns: 1fr 1fr;
+    font-size: 13px;
+  }
+
+  .cart-container .cart-img {
+    width: 50px;
+    height: 70px;
+  }
+
+  .cart-container .truck img {
+    width: 22px;
+  }
+
+  .cart-container .apply-btn {
+    padding: 8px 20px;
+  }
+}

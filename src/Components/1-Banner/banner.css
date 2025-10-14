@@ -18,7 +18,7 @@
   font-family: "Qwigley", cursive;
   font-size: 4.6rem;
   font-style: italic;
-  color: var(--accent);
+  color: var(--borderColor);
   line-height: 10px;
 }
 .banner-title {

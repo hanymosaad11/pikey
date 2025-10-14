@@ -1,0 +1,172 @@
+/* Breadcrumb */
+/* =========================  */
+
+.compare .breadcrumb {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 2rem 0rem 3rem 6rem;
+}
+.compare .breadcrumb .bc-home {
+  color: var(--muted);
+  margin: 0 5px;
+}
+.compare .breadcrumb .bc-current {
+  font-weight: 600;
+  margin: 0 5px;
+}
+
+/* ===== PRODUCTS (Top Row) ===== */
+.compare .compare-products {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 1fr);
+  gap: 0;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+}
+
+.compare .column-title {
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.compare .product-card {
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 50px 20px 20px 20px;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.compare .product-card:hover {
+  background: #fdfdfd;
+  transform: translateY(-2px);
+}
+
+.compare .remove-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 13px;
+  cursor: pointer;
+  position: absolute;
+  text-decoration: underline;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.compare .first-remove {
+  position: relative;
+  top: 10px;
+  transform: none;
+  left: 0;
+  margin-top: 10px;
+  text-decoration: underline;
+  color: red;
+  font-size: 13px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.compare .image-wrapper img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.compare .product-name {
+  margin: 15px 0 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.compare .price {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.compare .old-price {
+  text-decoration: line-through;
+  color: #999; /* الرمادي */
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.compare .new-price {
+  color: red; /* السعر الجديد بالأحمر */
+  font-weight: 600;
+}
+
+.compare .quick-add-btn {
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 13px;
+  background-color: white;
+  cursor: pointer;
+  margin: auto;
+}
+
+.compare .quick-add-btn:hover {
+  background: #ddd;
+}
+
+/* ===== COMPARISON TABLE (Bottom) ===== */
+.compare .compare-table {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 1fr);
+  border-left: 1px solid #eee;
+  border-top: none;
+}
+
+.compare .row-title,
+.compare .row-cell {
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare .row-title {
+  background: #fafafa;
+  font-weight: 500;
+  color: #333;
+  justify-content: flex-start;
+}
+
+.compare .in-stock {
+  color: #83b735;
+  font-weight: 500;
+}
+.compare .compare-table > *:nth-child(-n + 4) {
+  background-color: #f9f9f9; /* رمادي فاتح */
+}
+
+/* الصف الثاني بالكامل (Vendor) */
+.compare .compare-table > *:nth-child(n + 5):nth-child(-n + 8) {
+  background-color: #fff; /* أبيض */
+}
+
+/* الصف الثالث بالكامل (Color) */
+.compare .compare-table > *:nth-child(n + 9):nth-child(-n + 12) {
+  background-color: #f9f9f9; /* رمادي فاتح */
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .compare .compare-products,
+  .compare .compare-table {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .compare .compare-products,
+  .compare .compare-table {
+    grid-template-columns: 1fr;
+  }
+}

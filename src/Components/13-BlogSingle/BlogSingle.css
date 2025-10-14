@@ -1,116 +1,124 @@
-:root {
-  --primary: #ff5722;
-  --accent: #b00020;
-  --text: #222;
-  --muted: #777;
-}
-
 /* General */
 .blog-single-section {
-  max-width: 900px;
-  margin: 0 auto;
+  position: relative;
   padding: 20px;
-  font-family: "Poppins", sans-serif;
-  color: var(--text);
 }
 
 /* Breadcrumb */
-.breadcrumb {
+.blog-single-section .breadcrumb {
+  position: absolute;
+  top: 1.6rem;
+  left: 7rem;
   font-size: 13px;
-  color: var(--muted);
   margin-bottom: 12px;
+  letter-spacing: 3px;
 }
-.breadcrumb .bc-link {
-  text-decoration: none;
+.blog-single-section .breadcrumb .bc-link {
   color: var(--muted);
 }
-.breadcrumb .bc-link:hover {
-  color: var(--primary);
-}
-.breadcrumb .sep {
+
+.blog-single-section .breadcrumb .sep {
   margin: 0 6px;
   color: var(--muted);
 }
-.breadcrumb .current {
+.blog-single-section .breadcrumb .current {
   font-weight: 600;
-  color: var(--accent);
+  color: var(--dark);
 }
 
 /* Title */
-.single-title {
+.blog-single-section .single-title {
   text-align: center;
-  font-size: 28px;
-  letter-spacing: 2px;
-  margin: 16px 0;
-  color: var(--accent);
+  font-size: 1.7rem;
+  letter-spacing: 0.9rem;
+  margin: 4rem 0 2rem 0;
+  color: var(--borderColor);
 }
 
 /* Featured image */
-.single-image img {
+.blog-single-section .single-image {
   width: 100%;
+  height: 500px;
   border-radius: 10px;
   margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.blog-single-section .single-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 /* Content */
-.single-content p {
+.blog-single-section .single-content {
+  padding: 20px 100px 20px 20px;
+}
+.blog-single-section .single-content p {
   margin-bottom: 16px;
   line-height: 1.6;
   color: var(--text);
 }
-.single-content ul {
-  margin: 12px 0 16px 20px;
-}
-.single-content li {
-  margin-bottom: 8px;
-  line-height: 1.6;
+.blog-single-section .single-content .disabold {
+  color: #777777;
 }
 
 /* Share */
-.share-post {
+.blog-single-section .share-post {
   margin: 28px 0;
   text-align: left;
 }
-.share-post h4 {
+.blog-single-section .share-post h4 {
   font-size: 14px;
   margin-bottom: 10px;
   letter-spacing: 1px;
+  font-weight: 600;
 }
-.social-icons a {
+.blog-single-section .social-icons {
+  margin-top: 20px;
+}
+.blog-single-section .social-icons a {
   display: inline-block;
   margin-right: 12px;
   font-size: 16px;
   color: #555;
 }
-.social-icons a:hover {
+.blog-single-section .social-icons a:hover {
   color: var(--primary);
 }
 
 /* Author */
-.author-box {
+.blog-single-section .author-box {
   display: flex;
   align-items: flex-start;
-  background: #fafafa;
-  border: 1px solid #eee;
   border-radius: 10px;
-  padding: 16px;
-  margin: 32px 0;
+  padding: 0;
+  margin:  0;
 }
-.author-avatar {
+.blog-single-section .head-author{
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+.blog-single-section .author-avatar {
   width: 60px;
   height: 60px;
   border-radius: 50%;
   margin-right: 14px;
 }
-.author-info {
+.blog-single-section .author-info {
   flex: 1;
 }
-.author-name {
+.blog-single-section .author-name {
   margin: 0 0 6px;
   font-size: 16px;
   font-weight: 600;
 }
-.author-bio {
+.blog-single-section .author-bio {
   margin: 0;
   font-size: 14px;
   color: var(--muted);
@@ -118,109 +126,112 @@
 }
 
 /* Related blogs */
-.related-blogs {
+.blog-single-section .related-blogs {
   margin: 40px 0;
 }
-.related-heading {
+.blog-single-section .related-heading {
   text-align: center;
-  font-size: 20px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
+  font-size: 2.2rem;
+  margin-bottom: 2.8rem;
+  letter-spacing: 4px;
 }
-.related-grid {
+.blog-single-section .related-grid {
   width: 100%;
 }
-.related-card {
+.blog-single-section .related-card {
   float: left;
   width: 31%;
   margin-right: 3.5%;
-  margin-bottom: 22px;
+  margin-bottom: 5rem;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
-.related-card:nth-child(3n) {
+.blog-single-section .related-card:nth-child(3n) {
   margin-right: 0;
 }
-.related-link {
+.blog-single-section .related-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
-.related-card .thumb {
+.blog-single-section .related-card .thumb {
   position: relative;
   width: 100%;
-  height: 160px;
+  height: 250px;
   overflow: hidden;
 }
-.related-card .thumb img {
+.blog-single-section .related-card .thumb img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
   object-fit: cover;
+  object-position: 50% 44%;
 }
-.related-card .badge {
+.blog-single-section .related-card .badge {
   position: absolute;
   top: 10px;
   right: 10px;
-  background: var(--primary);
+  text-align: center;
+  background: var(--iconColor);
   color: #fff;
   padding: 5px 8px;
   font-size: 11px;
   border-radius: 4px;
 }
-.related-card .info {
+.blog-single-section .related-card .info {
   padding: 12px;
 }
-.meta-row {
+.blog-single-section .meta-row {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   font-size: 12px;
   color: var(--muted);
 }
-.avatar-sm {
+.blog-single-section .avatar-sm {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   margin-right: 6px;
 }
-.card-title {
+.blog-single-section .card-title {
   margin: 0 0 6px;
   font-size: 14px;
   font-weight: 600;
 }
-.excerpt {
+.blog-single-section .excerpt {
   font-size: 13px;
-  color: var(--muted);
+  color: var(--dark);
   margin: 0;
   line-height: 1.4;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .related-card {
+  .blog-single-section .related-card {
     width: 48%;
     margin-right: 4%;
   }
-  .related-card:nth-child(2n) {
+  .blog-single-section .related-card:nth-child(2n) {
     margin-right: 0;
   }
-  .author-box {
+  .blog-single-section .author-box {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .author-avatar {
+  .blog-single-section .author-avatar {
     margin: 0 0 12px;
   }
 }
 @media (max-width: 480px) {
-  .related-card {
+  .blog-single-section .related-card {
     width: 100%;
     margin-right: 0;
   }
-  .single-title {
+  .blog-single-section .single-title {
     font-size: 22px;
   }
 }

@@ -1,138 +1,254 @@
-import React, { useState } from "react";
+// Blog.jsx
+import React, { useState, useMemo, useRef } from "react";
 import "./Blog.css";
 import { Link } from "react-router-dom";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
+import FooterSection from "./../5-FooterSection/FooterSection";
+import { Sliders } from "react-feather"; // Filter icon
+
+// Posts Data
+const posts = Array.from({ length: 15 }, (_, i) => ({
+  id: i + 1,
+  title: "Fashion Trends",
+  excerpt:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non placerat mi. Etiam non tellus sem. Aenean...",
+  image: "/img/img2.png",
+  author:
+    i % 3 === 0 ? "Oliver Bennett" : i % 3 === 1 ? "John Smith" : "Alex Brown",
+  date:
+    i % 3 === 0 ? "18Jan2025" : i % 3 === 1 ? "July 10, 2025" : "July 9, 2025",
+  category1: "18",
+  category2: "APR",
+  category: i % 2 === 0 ? "FASHION" : "MEN", // لكل بوست كاتيجوري للتجربة
+}));
+
+// Categories & Tags
+const categories = [
+  "FASHION",
+  "MEN",
+  "TRENDS",
+  "ACCWSSORISE",
+  "Cable Ready",
+  "Available now",
+  "College",
+  "Corporate",
+  "Elevator",
+  "Extra Storage",
+  "High speed internet",
+  "Garage",
+  "Pet allowed",
+];
+const tags = [...categories];
 
 const Blog = () => {
   const [showMore, setShowMore] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeFilter, setActiveFilter] = useState("");
+  const inputRef = useRef(null);
+  // فلترة البوستات حسب البحث أو الفلتر
+  const filteredPosts = useMemo(() => {
+    return posts.filter((post) => {
+      const matchesSearch =
+        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
 
-  const posts = [
-    {
-      id: 1,
-      title: "10 Summer Outfit Ideas",
-      excerpt: "Get inspired with these fresh summer looks.",
-      image: "/img/img1.png",
-      author: "Jane Doe",
-      date: "July 12, 2025",
-      category: "Fashion",
-    },
-    {
-      id: 2,
-      title: "5 Tips for Better Photography",
-      excerpt: "Improve your skills with these pro tips.",
-      image: "/img/img2.png",
-      author: "John Smith",
-      date: "July 10, 2025",
-      category: "Photography",
-    },
-    {
-      id: 3,
-      title: "Travel Essentials Checklist",
-      excerpt: "Don’t forget these must-have items.",
-      image: "/img/img3.png",
-      author: "Alex Brown",
-      date: "July 9, 2025",
-      category: "Travel",
-    },
-    // more posts...
-  ];
+      const matchesFilter = activeFilter
+        ? post.category.toLowerCase() === activeFilter.toLowerCase()
+        : true;
+
+      return matchesSearch && matchesFilter;
+    });
+  }, [searchQuery, activeFilter]);
 
   return (
     <section className="blog-section">
-      {/* Hero */}
+      {/* Hero Section */}
       <div className="blog-hero">
         <div className="overlay"></div>
+
+        {/* Breadcrumb */}
+        <nav className="hero-breadcrumb" aria-label="Breadcrumb">
+          <Link to="/" className="bc-home">
+            HOME
+          </Link>
+          <span className="bc-sep">
+            <ArrowForwardIosIcon fontSize="12px" />
+          </span>
+          <span className="bc-current">BLOGS</span>
+        </nav>
+
+        {/* Hero Title */}
         <div className="hero-inner">
-          <div className="hero-breadcrumb">HOME / BLOG</div>
-          <h1 className="hero-title">BLOG</h1>
+          <h1 className="hero-title">BLOGS</h1>
         </div>
       </div>
 
-      {/* Search */}
+      {/* Search Box */}
       <div className="search-box">
-        <span className="search-icon">🔍</span>
-        <input type="search" placeholder="Search..." aria-label="Search posts" />
+        <span
+          className="search-icon"
+          onClick={() => inputRef.current && inputRef.current.focus()}
+        >
+          <SearchIcon fontSize="small" />
+        </span>
+        <input
+          ref={inputRef}
+          type="search"
+          placeholder="Search..."
+          aria-label="Search posts"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+
+        <span className="search-icon2" onClick={() => setSearchQuery("")}>
+          <CloseIcon fontSize="small" />
+        </span>
       </div>
 
+      {/* Main Container */}
       <div className="blog-container">
+        {/* Blog Content */}
         <div className="blog-content">
-          {/* Featured Heading */}
-          <h2 className="section-title">OUR FEATURED POSTS</h2>
+          {/* Section Heading */}
+          <h2 className="section-title">Our Featured Posts</h2>
 
           {/* Featured Post */}
           <div className="featured">
-            <img src="/img/img4.png" alt="Featured" className="featured-img" />
+            <img src="/img/img1.png" alt="Featured" className="featured-img" />
             <div className="featured-content">
               <h3 className="featured-title">
-                Discover the Art of Minimalist Living
+                Lorem Ipsum Is a Dummy Text Used As The Heading Of a Blog
               </h3>
               <p className="featured-excerpt">
-                Simplify your life with these minimalist tips and lifestyle hacks.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing
+                elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                magna aliquam.
               </p>
               <div className="post-meta">
-                <img src="/img/author1.png" alt="Author avatar" className="avatar"/>
-                <span>Sarah Lee</span> | <span>July 8, 2025</span>
+                <img
+                  src="/img/img3.jpg"
+                  alt="Author avatar"
+                  className="avatar"
+                />
+                <span>Oliver Bennett</span>•<span>18 Jan 2022</span>
               </div>
             </div>
           </div>
 
           {/* Posts Grid */}
-          <div className="post-grid">
-            {posts
-              .slice(0, showMore ? posts.length : 6)
-              .map((post) => (
-                <Link to={`/post/${post.id}`} key={post.id} className="post-card">
-                  <div className="post-image-wrap">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="post-image"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    <span className="badge">{post.category}</span>
-                  </div>
-                  <div className="post-body">
-                    <h4>{post.title}</h4>
-                    <p>{post.excerpt}</p>
-                    <div className="post-meta">
-                      <img src="/img/author1.png" alt="Author" className="avatar"/>
-                      <span>{post.author}</span> | <span>{post.date}</span>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-          </div>
+          <div className="main-content ">
+            <div className="post-grid">
+              {filteredPosts.length > 0 ? (
+                filteredPosts
+                  .slice(0, showMore ? filteredPosts.length : 12)
+                  .map((post) => (
+                    <Link
+                      to={`/post/${post.id}`}
+                      key={post.id}
+                      className="post-card"
+                    >
+                      <div className="post-image-wrap">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="post-image"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        <span className="badge">
+                          {post.category1}
+                          <br />
+                          {post.category2}
+                        </span>
+                      </div>
 
-          {/* Load More */}
-          <div className="load-more">
-            <button onClick={() => setShowMore(!showMore)}>
-              {showMore ? "LESS MORE" : "LOAD MORE"}
-            </button>
-          </div>
-        </div>
+                      <div className="post-body">
+                        <div className="post-meta card">
+                          <img
+                            src="/img/img3.jpg"
+                            alt="Author"
+                            className="avatar-sm"
+                          />
+                          <span>{post.author}</span>
 
-        {/* Sidebar */}
-        <aside className="sidebar">
-          <div className="filter-box">
-            <h3>Categories</h3>
-            <ul>
-              <li><button>Fashion (12)</button></li>
-              <li><button>Photography (8)</button></li>
-              <li><button>Travel (5)</button></li>
-            </ul>
-          </div>
-          <div className="filter-box">
-            <h3>Tags</h3>
-            <div className="tags">
-              <button>#summer</button>
-              <button>#style</button>
-              <button>#minimal</button>
-              <button>#travel</button>
-              <button>#lifestyle</button>
+                          <span>{post.date}</span>
+                        </div>
+                        <h4>{post.title}</h4>
+                        <p>{post.excerpt}</p>
+                      </div>
+                    </Link>
+                  ))
+              ) : (
+                <p>No posts found.</p>
+              )}
             </div>
+            {/* Sidebar */}
+            <aside className="sidebar">
+              {/* Filter Header */}
+              <div className="filter-header">
+                <h4 className="filter-title">FILTER</h4>
+                <Sliders className="filter-icon" size={16} />
+              </div>
+              <div className="filter-container">
+                {/* Category Section */}
+                <div className="filter-section">
+                  <h5 className="filter-label">CATEGORY</h5>
+                  <div className="filter-options">
+                    {categories.map((item, index) => (
+                      <span
+                        key={index}
+                        className={`filter-badge ${
+                          activeFilter === item ? "active" : ""
+                        }`}
+                        onClick={() =>
+                          setActiveFilter(activeFilter === item ? "" : item)
+                        }
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Tag Section */}
+                <div className="filter-section">
+                  <h5 className="filter-label">TAG</h5>
+                  <div className="filter-options">
+                    {tags.map((item, index) => (
+                      <span
+                        key={index}
+                        className={`filter-badge ${
+                          activeFilter === item ? "active" : ""
+                        }`}
+                        onClick={() =>
+                          setActiveFilter(activeFilter === item ? "" : item)
+                        }
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
-        </aside>
+          {/* Load More Button */}
+          {filteredPosts.length > 12 && (
+            <div className="load-more">
+              <button onClick={() => setShowMore(!showMore)}>
+                {showMore ? "LESS MORE" : "LOAD MORE"}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
+
+      {/* Footer */}
+      <FooterSection />
     </section>
   );
 };

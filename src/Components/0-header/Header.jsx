@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../21-CartContext/CartContext";
 /* =========================
    MUI Components
 ========================= */
@@ -29,6 +30,7 @@ export default function Header() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const { cartItems } = useCart();
 
   /* =========================
      Handle Language Menu
@@ -93,7 +95,7 @@ export default function Header() {
               <Link to="/about">About Us</Link>
             </li>
             <li>
-              <Link to="#">Contact Us</Link>
+              <Link to="/contact">Contact Us</Link>
             </li>
             <li>
               <Link to="/Blog">Blog</Link>
@@ -170,9 +172,9 @@ export default function Header() {
             <IconButton className="header-nav-icon">
               <FavoriteBorderIcon />
             </IconButton>
-            <IconButton className="header-nav-icon">
+            <IconButton className="header-nav-icon" component={Link} to="/cart">
               <Badge
-                badgeContent={"count"}
+                badgeContent={cartItems.length}
                 color="error"
                 overlap="circular"
                 showZero

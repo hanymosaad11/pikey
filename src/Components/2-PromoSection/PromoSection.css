@@ -38,7 +38,7 @@
   font-family: "Qwigley", cursive;
   font-size: 3.6rem;
   font-style: italic;
-  color: var(--accent);
+  color: var(--borderColor);
   line-height: 30px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .best-seller .shop-btn {
-  background: var(--accent);
+  background: var(--borderColor);
   color: #fff;
   border: none;
   padding: 0.6rem 2.6rem;

@@ -1,0 +1,415 @@
+/* =========================
+   Checkout Page CSS
+========================= */
+
+/* -------------------------
+   Breadcrumb
+------------------------- */
+.checkout-page .breadcrumb {
+  font-size: 14px;
+  margin: 2.6rem 0 4.2rem 4.9rem;
+  letter-spacing: 3px;
+}
+.checkout-page .breadcrumb .bc-home {
+  color: var(--muted);
+}
+
+/* -------------------------
+   Layout
+------------------------- */
+.checkout-page .checkout-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  flex-wrap: wrap; /* ensures proper wrapping on smaller screens */
+}
+.checkout-page .left-col {
+  flex: 3;
+  min-width: 300px; /* prevent shrinking too much on small screens */
+}
+.checkout-page .left-col h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.checkout-page .right-col {
+  width: 380px;
+  flex: none;
+  margin-top: 7.5rem;
+  min-width: 250px; /* responsive safeguard */
+}
+
+/* -------------------------
+   Form Styles
+------------------------- */
+.checkout-page form .input {
+  margin-bottom: 18px;
+  position: relative;
+}
+.checkout-page form label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #777;
+  font-weight: 400;
+}
+.checkout-page form input,
+.checkout-page form select,
+.checkout-page form textarea {
+  width: 100%;
+  height: 44px;
+  padding: 8px 12px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #fff;
+}
+.checkout-page form textarea {
+  height: 120px;
+  resize: none;
+  border-radius: 1px;
+}
+
+/* Custom select arrow handling */
+.checkout-page form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  padding-right: 40px;
+  position: relative;
+}
+.checkout-page form .input .icon {
+  position: absolute;
+  right: 12px;
+  top: 69%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555;
+}
+
+/* -------------------------
+   Form Row using Flex
+------------------------- */
+.checkout-page .form-row {
+  display: flex;
+  gap: 2%;
+}
+.checkout-page .form-row .input {
+  flex: 1;
+}
+
+/* Flag inside input */
+.checkout-page form .input-with-flag {
+  position: relative;
+}
+.checkout-page form .input-with-flag input {
+  padding-left: 5rem;
+}
+.checkout-page form .input-with-flag img.flag-icon {
+  position: absolute;
+  left: 12px;
+  top: 73%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: auto;
+}
+
+/* -------------------------
+   Summary Section
+------------------------- */
+.checkout-page .summary {
+  border-radius: 12px;
+  padding: 25px 20px;
+  background: #fff;
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+}
+.checkout-page .summary h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.checkout-page .summary p,
+.checkout-page .summary-content p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #444;
+  margin: 6px 0;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+.checkout-page .summary-content p span:first-child {
+  text-transform: uppercase;
+}
+.checkout-page .summary-content .total {
+  font-size: 16px;
+  color: #000;
+  margin-top: 10px;
+  border: none;
+  font-weight: 400;
+}
+.checkout-page .summary-content .total strong {
+  font-weight: 700;
+}
+
+/* -------------------------
+   Payment Methods
+------------------------- */
+.checkout-page .payment-method {
+  margin: 25px 0 15px;
+}
+.checkout-page .payment-method h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.checkout-page .payment-method label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Credit Card Fields Layout */
+.checkout-page .card-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+.checkout-page .card-fields label {
+  font-size: 14px;
+  color: #000;
+}
+.checkout-page .card-fields input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.checkout-page .card-fields .input-card {
+  width: 200px;
+
+}
+.checkout-page .card-fields .input-card1 {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+
+}
+.checkout-page .card-fields .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+/* -------------------------
+   Custom Radio Buttons
+------------------------- */
+.checkout-page .payment-method input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.checkout-page .payment-method input[type="radio"]:checked {
+  border-color: #f59b00;
+  background-color: #f59b00;
+}
+.checkout-page .payment-method input[type="radio"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* -------------------------
+   Buttons
+------------------------- */
+.checkout-page .pay-btn {
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: 180px;
+  height: 44px;
+  border-radius: 10px;
+  background: #f59b00;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+.checkout-page .pay-btn:hover {
+  opacity: 0.9;
+}
+
+/* -------------------------
+   React Tel Input
+------------------------- */
+.react-tel-input .form-control {
+  width: 100% !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  border: 1px solid #e6e6e6 !important;
+  background-color: #fff;
+}
+
+/* -------------------------
+   Checkboxes
+------------------------- */
+.checkout-page .checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+.checkout-page .checkboxes label {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  gap: 8px;
+}
+.checkout-page .checkboxes input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.checkout-page .checkboxes input[type="checkbox"]:checked {
+  background-color: var(--iconColor);
+  border-color: var(--iconColor);
+}
+.checkout-page .checkboxes input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* -------------------------
+   Credit Option Styling
+------------------------- */
+.checkout-page .payment-method .credit-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+.checkout-page .payment-method .credit-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.checkout-page .payment-method .credit-content .left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.checkout-page .payment-method .arrow-wrapper {
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f59b00;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+/* =========================
+   Responsive Styles
+========================= */
+@media (max-width: 1200px) {
+  .checkout-page .checkout-wrap {
+    gap: 3rem;
+  }
+}
+@media (max-width: 992px) {
+  .checkout-page .checkout-wrap {
+    flex-direction: column;
+  }
+  .checkout-page .summary {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    border-left: none;
+  }
+  .checkout-page .right-col {
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .checkout-page .checkout-wrap {
+    gap: 2rem;
+  }
+  .checkout-page .left-col,
+  .checkout-page .right-col {
+    width: 100%;
+  }
+  .checkout-page .pay-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .checkout-page .breadcrumb {
+    margin: 1.5rem 1rem 2rem 1rem;
+    font-size: 13px;
+  }
+  .checkout-page .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .checkout-page .card-fields .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

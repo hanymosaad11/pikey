@@ -13,7 +13,16 @@ import About from "./Components/9-About/About";
 import Faq from "./Components/10-Faq/Faq";
 import PrivacyPolicy from "./Components/11-PrivacyPolicy/PrivacyPolicy";
 import Blog from "./Components/12-Blog/Blog";
-import BlogSingle from "./Components/12-Blog/BlogSingle";
+import BlogSingle from "./Components/13-BlogSingle/BlogSingle";
+import Contact from "./Components/14-Contact/Contact";
+import Cart from "./Components/15-Cart/Cart";
+import CheckoutPage from "./Components/16-CheckoutPage/CheckoutPage";
+import OrderConfirmed from "./Components/17-OrderConfirmed/OrderConfirmed";
+import Filed from "./Components/17-OrderConfirmed/filed";
+import Error404 from "./Components/18-Error404/Error404";
+import Error419 from "./Components/18-Error404/Error419";
+import CompareSection from "./Components/19-CompareSection/CompareSection";
+import Wishlist from "./Components/20-Wishlist/Wishlist";
 
 export default function App() {
   return (
@@ -36,13 +45,23 @@ export default function App() {
           />
           <Route path="/products" element={<Products />} />
           <Route path="/categories" element={<Categories />} />
-          <Route path="/profile" element={<Profile/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/faq" element={<Faq/>} />
-          <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
-          <Route path="/blog" element={<Blog/>} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/post/:id" element={<BlogSingle />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/checkoutpage" element={<CheckoutPage />} />
 
+          {/* لسه هعملهاهحدد مكانها  بعدين؟ */}
+          <Route path="/OrderConfirmed" element={<OrderConfirmed />} />
+          <Route path="/filed" element={<Filed />} />
+          <Route path="/Error404" element={<Error404 />} />
+          <Route path="/Error419" element={<Error419 />} />
+          <Route path="/compareSection" element={<CompareSection />} />
+          <Route path="/wishlist" element={<Wishlist />} />
         </Routes>
       </Router>
     </>

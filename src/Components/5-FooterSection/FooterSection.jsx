@@ -7,8 +7,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 
-export default function FooterSection() {
+export default function FooterSection({ customClass }) {
   return (
+     <div className={`footer-wrapper ${customClass || ""}`}>
     <div className="footer-wrapper">
       {/* 🔸 Newsletter Bar */}
       <section className="newsletter-bar">
@@ -115,6 +116,7 @@ export default function FooterSection() {
           </p>
         </div>
       </footer>
+    </div>
     </div>
   );
 }
