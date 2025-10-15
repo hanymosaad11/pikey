@@ -23,12 +23,16 @@ import Error404 from "./Components/18-Error404/Error404";
 import Error419 from "./Components/18-Error404/Error419";
 import CompareSection from "./Components/19-CompareSection/CompareSection";
 import Wishlist from "./Components/20-Wishlist/Wishlist";
+import Signup from "./Components/22-Signup/Signup";
+import ProductDetails from "./Components/23-ProductDetails/ProductDetails";
 
+// الصفحات اللي مش عايز يظهر فيها الهيدر
+const hideHeaderPaths = ["/signup", "/login"];
 export default function App() {
   return (
     <>
       <Router>
-        <Header />
+        {!hideHeaderPaths.includes(location.pathname) && <Header />}
 
         <Routes>
           <Route
@@ -56,12 +60,14 @@ export default function App() {
           <Route path="/checkoutpage" element={<CheckoutPage />} />
 
           {/* لسه هعملهاهحدد مكانها  بعدين؟ */}
-          <Route path="/OrderConfirmed" element={<OrderConfirmed />} />
+          <Route path="/orderconfirmed" element={<OrderConfirmed />} />
           <Route path="/filed" element={<Filed />} />
-          <Route path="/Error404" element={<Error404 />} />
-          <Route path="/Error419" element={<Error419 />} />
-          <Route path="/compareSection" element={<CompareSection />} />
+          <Route path="/error404" element={<Error404 />} />
+          <Route path="/error419" element={<Error419 />} />
+          <Route path="/comparesection" element={<CompareSection />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/productdetails" element={<ProductDetails />} />
         </Routes>
       </Router>
     </>
