@@ -93,8 +93,14 @@
   font-size: 1.3rem;
   letter-spacing: 1px;
   margin-bottom: 25px;
+  text-transform: uppercase;
 }
-
+.signup-container .signup-suptitle {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  margin-right: 4rem;
+}
 /* =====================
    Google Button
 ===================== */
@@ -178,7 +184,7 @@
 ===================== */
 .signup-container .signup-btn {
   width: 150px;
-  background: #ffb100;
+  background: #ff9c00;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -190,7 +196,7 @@
 }
 
 .signup-container .signup-btn:hover {
-  background: #ffc933;
+  background: rgb(255, 197, 36);
 }
 
 /* =====================
@@ -200,17 +206,33 @@
   margin-top: 15px;
   font-size: 13px;
 }
+.signup-container .signup-text {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+.signup-container .signup-text2 {
+  margin-top: 1px;
+  font-size: 13px;
+  text-decoration: underline;
+}
 
 .signup-container .login-link {
   color: #ffb100;
   text-decoration: none;
   font-weight: 600;
 }
+.signup-container .signup-link {
+  color: #ffb100;
+  text-decoration: none;
+  font-weight: 600;
+  text-decoration: underline;
+}
 
 .signup-container .login-link:hover {
   text-decoration: underline;
 }
-
 
 .signup-container .password-group {
   position: relative;
@@ -239,6 +261,15 @@
 .signup-container .input-field:focus {
   outline: none;
   box-shadow: none;
+}
+.signup-container .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.signup-container .icons .icon:hover {
+  transform: scale(1.1);
 }
 
 /* =========================================================

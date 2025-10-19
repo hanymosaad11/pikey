@@ -25,6 +25,10 @@ import CompareSection from "./Components/19-CompareSection/CompareSection";
 import Wishlist from "./Components/20-Wishlist/Wishlist";
 import Signup from "./Components/22-Signup/Signup";
 import ProductDetails from "./Components/23-ProductDetails/ProductDetails";
+import Login from "./Components/22-Signup/Login";
+import ProductPage from "./Components/24-ProductPage/ProductPage";
+import ForgetPassword1 from "./Components/26-ForgetPassword/ForgetPassword1";
+import ForgetPassword2 from './Components/26-ForgetPassword/ForgetPassword2';
 
 // الصفحات اللي مش عايز يظهر فيها الهيدر
 const hideHeaderPaths = ["/signup", "/login"];
@@ -67,7 +71,11 @@ export default function App() {
           <Route path="/comparesection" element={<CompareSection />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/productdetails" element={<ProductDetails />} />
+          <Route path="/productpage" element={<ProductPage />} />
+          <Route path="/forgetpassword1" element={<ForgetPassword1 />} />
+          <Route path="/forgetpassword2" element={<ForgetPassword2 />} />
         </Routes>
       </Router>
     </>
